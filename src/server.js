@@ -6,22 +6,22 @@ const fs = require("fs");
 app.use(express.json()); // for parsing application/json
 app.use(express.static(path.resolve('../public')));
 const router = express.Router();
-console.log(path.resolve('../public'));
+// console.log(path.resolve('../public'));
 router.get('/guide',function(req,res){
-  res.sendFile(path.resolve('../public/guide.html'));
+  res.sendFile(path.resolve('../rest-api/public/guide.html'));
 });
 
 //readfile in nodejs
-let posts = fs.readFileSync("./payloads/posts.json");
+let posts = fs.readFileSync(path.resolve("./src/payloads/posts.json"));
 //convert buffer to json
 posts = JSON.parse(posts);
 
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve('../public/index.html'));
+  res.sendFile(path.resolve('../rest-api/public/index.html'));
 });
 
 app.get("/api/posts", (req, res) => {
-    res.sendFile(path.resolve('./payloads/posts.json'));
+    res.sendFile(path.resolve('./src/payloads/posts.json'));
 });
 app.get("/api/posts/:id", (req, res) => {
   res.send(posts[parseInt(req.params.id) - 1]);
@@ -43,11 +43,11 @@ app.delete("/api/posts/:id", (req, res) => {
 });
 
 //rest api for comments
-let comments = fs.readFileSync("./payloads/comments.json");
+let comments = fs.readFileSync("./src/payloads/comments.json");
 comments = JSON.parse(comments);
 
 app.get("/api/comments", (req, res) => {
-  res.sendFile(path.resolve('./payloads/comments.json'));
+  res.sendFile(path.resolve('./src/payloads/comments.json'));
 });
 app.get("/api/comments/:id", (req, res) => {
   res.send(comments[parseInt(req.params.id) - 1]);
@@ -69,11 +69,11 @@ app.delete("/api/comments/:id", (req, res) => {
 });
 
 // rest api for todos
-let todos = fs.readFileSync("./payloads/todos.json");
+let todos = fs.readFileSync("./src/payloads/todos.json");
 todos = JSON.parse(todos);
 
 app.get("/api/todos", (req, res) => {
-  res.sendFile(path.resolve('./payloads/todos.json'));
+  res.sendFile(path.resolve('./src/payloads/todos.json'));
 });
 app.get("/api/todos/:id", (req, res) => {
   res.send(todos[parseInt(req.params.id) - 1]);
@@ -95,11 +95,11 @@ app.delete("/api/todos/:id", (req, res) => {
 });
 
 // rest api for albums
-let albums = fs.readFileSync("./payloads/albums.json");
+let albums = fs.readFileSync("./src/payloads/albums.json");
 albums = JSON.parse(albums);
 
 app.get("/api/albums", (req, res) => {
-  res.sendFile(path.resolve('./payloads/albums.json'));
+  res.sendFile(path.resolve('./src/payloads/albums.json'));
 });
 app.get("/api/albums/:id", (req, res) => {
   res.send(albums[parseInt(req.params.id) - 1]);
@@ -121,11 +121,11 @@ app.delete("/api/albums/:id", (req, res) => {
 });
 
 // rest api for photos
-let photos = fs.readFileSync("./payloads/photos.json");
+let photos = fs.readFileSync("./src/payloads/photos.json");
 photos = JSON.parse(photos);
 
 app.get("/api/photos", (req, res) => {
-  res.sendFile(path.resolve('./payloads/photos.json'));
+  res.sendFile(path.resolve('./src/payloads/photos.json'));
 });
 app.get("/api/photos/:id", (req, res) => {
   res.send(photos[parseInt(req.params.id) - 1]);
@@ -147,11 +147,11 @@ app.delete("/api/photos/:id", (req, res) => {
 });
 
 // rest api for users
-let users = fs.readFileSync("./payloads/users.json");
+let users = fs.readFileSync("./src/payloads/users.json");
 users = JSON.parse(users);
 
 app.get("/api/users", (req, res) => {
-  res.sendFile(path.resolve('./payloads/users.json'));
+  res.sendFile(path.resolve('./src/payloads/users.json'));
 });
 app.get("/api/users/:id", (req, res) => {
   res.send(users[parseInt(req.params.id) - 1]);
