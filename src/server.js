@@ -8,7 +8,7 @@ app.use(express.static(path.resolve('../public')));
 const router = express.Router();
 // console.log(path.resolve('../public'));
 router.get('/guide',function(req,res){
-  res.sendFile(path.resolve('../rest-api/public/guide.html'));
+  res.sendFile(path.resolve('../public/guide.html'));
 });
 
 //readfile in nodejs
