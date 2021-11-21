@@ -17,7 +17,7 @@ let posts = fs.readFileSync(path.resolve("./src/payloads/posts.json"));
 posts = JSON.parse(posts);
 
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve('../rest-api/public/index.html'));
+  res.sendFile(path.resolve('../public/index.html'));
 });
 
 app.get("/api/posts", (req, res) => {
