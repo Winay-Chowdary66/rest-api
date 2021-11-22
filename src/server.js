@@ -175,7 +175,7 @@ app.delete("/api/users/:id", (req, res) => {
 app.use('/', router);
 
 app.get('*', (req, res)=>{
-  res.send(`What!!!      "<h2>${req.url}</h2>"       Seriously`, 404);
+  res.send(`<center>What!!!  <h2>"${req.url}"</h2>   Seriously</center>`, 404);
 });
 
 const port = process.env.PORT || 3000;
