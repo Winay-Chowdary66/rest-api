@@ -4,7 +4,7 @@ const path = require('path');
 const fs = require("fs");
 
 app.use(express.json()); // for parsing application/json
-// app.use(express.static(path.resolve('../public')));
+app.use(express.static(path.resolve('./src/public')));
 const router = express.Router();
 // console.log(path.resolve('../public'));
 router.get('/guide',function(req,res){

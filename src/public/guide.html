@@ -51,11 +51,11 @@
             >
           </li>
           <li>
-            <a href="https://blog.crud-is-best.net" class="mr-4 no-underline">Blog</a
+            <a href="https://blog.rest-api-crud66.herokuapp.com" class="mr-4 no-underline">Blog</a
             >
           </li>
           <li>
-            <a href="https://my-json-server.crud-is-best.net" class="no-underline">My JSON Server</a
+            <a href="https://my-json-server.rest-api-crud66.herokuapp.com" class="no-underline">My JSON Server</a
             >
           </li> -->
         </ul>
@@ -77,7 +77,7 @@
         </p>
         <div id="crbn"></div>
         <h3>Getting a resource</h3>
-        <pre><code class="language-js">fetch('https://crud-is-best.net/api/posts/1')
+        <pre><code class="language-js">fetch('https://rest-api-crud66.herokuapp.com/api/posts/1')
   .then((response) =&gt; response.json())
   .then((json) =&gt; console.log(json));
 </code></pre>
@@ -90,7 +90,7 @@
 }
 </code></pre>
         <h3>Listing all resources</h3>
-        <pre><code class="language-js">fetch('https://crud-is-best.net/api/posts')
+        <pre><code class="language-js">fetch('https://rest-api-crud66.herokuapp.com/api/posts')
   .then((response) =&gt; response.json())
   .then((json) =&gt; console.log(json));
 </code></pre>
@@ -104,7 +104,7 @@
 ];
 </code></pre>
         <h3>Creating a resource</h3>
-        <pre><code class="language-js">fetch('https://crud-is-best.net/api/posts', {
+        <pre><code class="language-js">fetch('https://rest-api-crud66.herokuapp.com/api/posts', {
   method: 'POST',
   body: JSON.stringify({
     title: 'foo',
@@ -130,7 +130,7 @@
           server but it will be faked as if.
         </p>
         <h3>Updating a resource</h3>
-        <pre><code class="language-js">fetch('https://crud-is-best.net/api/posts/1', {
+        <pre><code class="language-js">fetch('https://rest-api-crud66.herokuapp.com/api/posts/1', {
   method: 'PUT',
   body: JSON.stringify({
     id: 1,
@@ -156,7 +156,7 @@
           server but it will be faked as if.
         </p>
         <h3>Patching a resource</h3>
-        <pre><code class="language-js">fetch('https://crud-is-best.net/api/posts/1', {
+        <pre><code class="language-js">fetch('https://rest-api-crud66.herokuapp.com/api/posts/1', {
   method: 'PATCH',
   body: JSON.stringify({
     title: 'foo',
@@ -180,7 +180,7 @@
           server but it will be faked as if.
         </p>
         <h3>Deleting a resource</h3>
-        <pre><code class="language-js">fetch('https://crud-is-best.net/api/posts/1', {
+        <pre><code class="language-js">fetch('https://rest-api-crud66.herokuapp.com/api/posts/1', {
   method: 'DELETE',
 });
 </code></pre>
@@ -191,7 +191,7 @@
         <h3>Filtering resources</h3>
         <!-- <p>Basic filtering is supported through query parameters.</p>
 <pre><code class="language-js">// This will return all the posts that belong to the first user
-fetch('https://.crud-is-best.net/posts?userId=1')
+fetch('https://.rest-api-crud66.herokuapp.com/posts?userId=1')
   .then((response) =&gt; response.json())
   .then((json) =&gt; console.log(json));
 </code></pre> -->
