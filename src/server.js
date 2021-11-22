@@ -4,11 +4,11 @@ const path = require('path');
 const fs = require("fs");
 
 app.use(express.json()); // for parsing application/json
-app.use(express.static(path.resolve('../public')));
+// app.use(express.static(path.resolve('../public')));
 const router = express.Router();
 // console.log(path.resolve('../public'));
 router.get('/guide',function(req,res){
-  res.sendFile(path.resolve('../public/guide.html'));
+  res.sendFile(path.resolve('./src/public/guide.html'));
 });
 
 //readfile in nodejs
@@ -17,7 +17,7 @@ let posts = fs.readFileSync(path.resolve("./src/payloads/posts.json"));
 posts = JSON.parse(posts);
 
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve('../public/index.html'));
+  res.sendFile(path.resolve('./src/public/index.html'));
 });
 
 app.get("/api/posts", (req, res) => {
