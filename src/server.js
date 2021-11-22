@@ -174,6 +174,10 @@ app.delete("/api/users/:id", (req, res) => {
 
 app.use('/', router);
 
+app.get('*', (req, res)=>{
+  res.send(`What!!! ${req.url} Seriously`, 404);
+}
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
