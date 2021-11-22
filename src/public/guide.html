@@ -222,10 +222,14 @@ fetch('https://crud.is-best.net/api/posts/1/netments')
       <div class="mb-one">
         Coded and maintained with ❤️ by
         <a href="https://github.net/Winay-Chowdary66/rest-api">crud-is-best</a>
-        © 2021
+        <div> &copy; Copyright <p id="year">2021</p></div>
       </div>
     </footer>
-    <script src="/prism.min.js"></script>
+    <script>
+      year = document.getElementById('year');
+      year.innerHTML = new Date().getFullYear();
+    </script>
+    <!-- <script src="/prism.min.js"></script>
     <script src="./script.js"></script>
     <script
       defer
@@ -233,6 +237,7 @@ fetch('https://crud.is-best.net/api/posts/1/netments')
       integrity="sha512-gV/bogrUTVP2N3IzTDKzgP0Js1gg4fbwtYB6ftgLbKQu/V8yH2+lrKCfKHelh4SO3DPzKj4/glTO+tNJGDnb0A=="
       data-cf-beacon='{"rayId":"6b189da80fc24ad5","version":"2021.11.0","r":1,"token":"2f059cbf58a24e59854ee0884c97b166","si":100}'
       crossorigin="anonymous"
-    ></script>
+    ></script> -->
+
   </body>
 </html>
