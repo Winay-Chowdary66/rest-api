@@ -3,6 +3,12 @@ const app = express();
 const path = require('path');
 const fs = require("fs");
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*"); 
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.use(express.json()); // for parsing application/json
 app.use(express.static(path.resolve('./src/public')));
 const router = express.Router();
